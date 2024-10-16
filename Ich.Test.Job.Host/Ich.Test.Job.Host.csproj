@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Ich.Test</RootNamespace>
+        <UserSecretsId>37bcf7d5-4d4e-4e29-95af-de32d423a61f</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Hangfire" Version="1.8.14" />
+      <PackageReference Include="Hangfire.InMemory" Version="1.0.0" />
+      <PackageReference Include="HotChocolate.AspNetCore" Version="13.9.14" />
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Ich.Test.Codere.Application\Ich.Test.Codere.Application.csproj" />
+      <ProjectReference Include="..\Ich.Test.Codere.Domain\Ich.Test.Codere.Domain.csproj" />
+      <ProjectReference Include="..\Ich.Test.Codere.HotChocolate.Infrastructure\Ich.Test.Codere.HotChocolate.Infrastructure.csproj" />
+      <ProjectReference Include="..\Ich.Test.Codere.SqlServer.Infrastructure\Ich.Test.Codere.SqlServer.Infrastructure.csproj" />
+      <ProjectReference Include="..\Ich.Test.Codere.WebApi.Infrastructure\Ich.Test.Codere.WebApi.Infrastructure.csproj" />
+      <ProjectReference Include="..\Ich.Test.Core.Host\Ich.Test.Core.Host.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Jobs\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Properties\launchSettings.json" />
+    </ItemGroup>
+
+</Project>
